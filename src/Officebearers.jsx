@@ -6,76 +6,63 @@ const OfficeBearersCard = ({ officeBearers }) => {
       {officeBearers.map((bearer, index) => (
         <div
           key={index}
-          className={`flex flex-col md:flex-row justify-between items-start ${
+          className={`flex flex-col md:flex-row items-center ${
             index % 2 !== 0 ? "md:flex-row-reverse" : ""
-          } ${index > 0 ? "mt-8" : ""}`}
+          } ${index > 0 ? "mt-10" : ""}`}
         >
           {/* Photo Section */}
-          <div className={`w-full md:w-1/3 flex ${
-            index % 2 !== 0 ? "justify-end" : "justify-start" // Align photo to end for second office bearer
-          }`}>
-            <div className="w-40 h-40 rounded-lg overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src={bearer.photo}
-                alt={bearer.name}
-              />
-            </div>
+          <div className="w-48 h-48 rounded-lg overflow-hidden shadow-md">
+            <img
+              className="w-full h-full object-cover object-[center_30%] hover:scale-110 transition duration-300"
+              src={bearer.photo}
+              alt={bearer.name}
+            />
           </div>
 
           {/* Content Section */}
-          <div className={`w-full md:w-2/3 mt-4 md:mt-0 ${
-            index % 2 !== 0 ? "md:pr-6" : "md:pl-6" // Consistent gap for content
-          }`}>
+          <div
+            className={`w-full md:w-2/3 mt-6 md:mt-0 text-center md:text-left ${
+              index % 2 !== 0 ? "md:pr-6" : "md:pl-6"
+            }`}
+          >
             {/* Designation */}
-            <div className="bg-blue-col p-4 rounded-lg shadow-md w-80">
-              <p className="text-lg font-semibold text-left">{bearer.designation}</p>
+            <div className="bg-blue-col px-4 py-2 rounded-lg shadow-md inline-block">
+              <p className="text-lg font-semibold">
+                {bearer.designation}
+              </p>
             </div>
 
             {/* Name */}
-            <h2 className="text-2xl font-bold text-gray-800 mt-4 text-left">{bearer.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mt-4">
+              {bearer.name}
+            </h2>
 
-            {/* About Section */}
-            <p className="text-gray-600 text-lg mt-4 text-left">{bearer.about}</p>
+            {/* About */}
+            <p className="text-gray-600 text-lg mt-3">
+              {bearer.about}
+            </p>
 
-            {/* Social Media Icons */}
-            <div className={`flex ${
-              index % 2 !== 0 ? "justify-start" : "justify-end" // Align icons to start for second office bearer
-            } space-x-4 mt-6`}>
-              <a
-                href={bearer.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform transition-transform duration-300 hover:scale-110"
-              >
+            {/* Social Icons */}
+            <div className="flex justify-center md:justify-start space-x-4 mt-5">
+              <a href={bearer.linkedin} target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
                   alt="LinkedIn"
-                  className="w-8 h-8"
+                  className="w-8 h-8 hover:scale-110 transition"
                 />
               </a>
-              <a
-                href={bearer.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform transition-transform duration-300 hover:scale-110"
-              >
+              <a href={bearer.instagram} target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
                   alt="Instagram"
-                  className="w-8 h-8"
+                  className="w-8 h-8 hover:scale-110 transition"
                 />
               </a>
-              <a
-                href={bearer.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transform transition-transform duration-300 hover:scale-110"
-              >
+              <a href={bearer.whatsapp} target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/220/220236.png"
                   alt="WhatsApp"
-                  className="w-8 h-8"
+                  className="w-8 h-8 hover:scale-110 transition"
                 />
               </a>
             </div>
