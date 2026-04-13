@@ -47,10 +47,12 @@ function ClubTeams() {
       icon: "vector.png", // Path to your .png image
       description: "The Graphics and Design Team creates visual content, including posters, logos, and social media graphics.",
       members: [
-        { name: "Achint Kaur", designation: "Lead", photo: "desgin1.png.jpeg" },
-        { name: "Arman", designation: "Co-Lead", photo: "design2.png.jpeg" },
-        { name: "Devanshu", designation: "Member", photo: "design2=3.png.jpeg" },
-        { name: "Shruti", designation: "Member", photo: "design4.png.jpeg" },
+        { name: "Arti Verma", designation: "Lead", photo: "desgin1.png.jpeg" },
+        { name: "Chirag Malviya", designation: "Co-Lead", photo: "design2.png.jpeg" },
+        { name: "Deepanshu", designation: "Member", photo: "design2=3.png.jpeg" },
+        { name: "Arghyadeep Sen", designation: "Member", photo: "design4.png.jpeg" },
+        { name: "Prajjwal Kumar Srivastava", designation: "Member", photo: "design4.png.jpeg" },
+        { name: "Anand Kumar Gautam", designation: "Member", photo: "design4.png.jpeg" },
       ],
     },
   ];
